@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgb(245, 245, 245);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    width: 92vw;
+    height: 85vh;
+    box-shadow: -1px -1px 5px rgba(0, 0, 0, .05), 5px 5px 15px rgba(0, 0, 0, .07);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.side-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 64px 24px 0;
+    width: 275px;
+    height: 100%;
+    background: rgb(0, 100, 75);
+}
+
+.nav-bar {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 24px;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    z-index: 100;
+}
+
+.nav-label {
+    color: rgb(100, 100, 100);
+}
+
+.nav-item {
+    text-decoration: none;
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+.nav-item p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.nav-item.active p {
+    color: rgb(255, 255, 255);
+}
+
+.logout {
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(255, 0, 0);
+}
+
+.content-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 275px);
+    height: 100%;
+    padding: 12px;
+    padding-top: 64px;
+}
+
+.controller {
+    display: flex;
+    padding: 24px;
+    background: rgb(255, 255, 255);
+    gap: 8px;
+}
+
+.form-group input,
+select,
+textarea {
+    display: block;
+    border: none;
+    outline: none;
+    min-width: 275px;
+    height: 48px;
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid rgb(245, 245, 245);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .05);
+    color: rgb(150, 150, 150);
+}
+
+.form-group input:focus {
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, .05), inset 1px 1px 3px rgba(0, 0, 0, .05);
+    color: rgb(100, 100, 100);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-group input:focus::placeholder,
+textarea:focus::placeholder {
+    color: rgb(225, 225, 225);
+}
+
+.form-group input::placeholder,
+textarea::placeholder {
+    color: rgb(200, 200, 200);
+}
+
+.controller .btn {
+    text-decoration: none;
+    display: flex;
+    height: 48px;
+    width: 100px;
+    background: rgb(0, 100, 75);
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.btn.secondary {
+    background: rgb(100, 100, 100);
+}
+
+.alert-box {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 16px;
+    min-width: 275px;
+    background: rgb(255, 100, 100);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.alert-box.success {
+    background: rgb(0, 100, 75) !important;
+}
+
+.table-box {
+    padding: 24px;
+    margin-top: 12px;
+    background: rgb(255, 255, 255);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid rgb(225, 225, 225);
+}
+
+th {
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+td {
+    padding: 12px;
+    font-size: 12px;
+}
+
+tr th:last-child,
+tr td:last-child {
+    max-width: max-content;
+}
+
+tr th:first-child,
+tr td:first-child {
+    text-align: center;
+}
+
+.action-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.badge {
+    padding: 5px 8px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.badge.yellow {
+    background: rgb(225, 200, 50);
+}
+
+.badge.red {
+    background: rgb(255, 100, 100);
+}
+
+.stripped {
+    background: rgb(245, 245, 245);
+}

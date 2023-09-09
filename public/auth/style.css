@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgb(245, 245, 245);
+}
+
+.card {
+    position: absolute;
+    display: flex;
+    width: 85vw;
+    height: 80vh;
+    box-shadow: -1px -1px 5px rgba(0, 0, 0, .05), 5px 5px 15px rgba(0, 0, 0, .07);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card .image,
+.card .form {
+    width: calc(85vw / 2);
+    height: 80vh;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 100, 75);
+    gap: 24px;
+    font-size: 150px;
+    text-shadow: 0 0 15px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+.image p {
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-shadow: none;
+    color: rgba(255, 255, 255, .6);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+
+.form-header {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: rgb(200, 200, 200);
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group input {
+    display: block;
+    border: none;
+    outline: none;
+    min-width: 275px;
+    padding: 16px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid rgb(245, 245, 245);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .05);
+    color: rgb(200, 200, 200);
+}
+
+.form-group input:focus {
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, .05), inset 1px 1px 3px rgba(0, 0, 0, .05);
+    color: rgb(100, 100, 100);
+}
+
+.form-group input:focus::placeholder {
+    color: rgb(225, 225, 225);
+}
+
+.form-group input::placeholder {
+    color: rgb(200, 200, 200);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: rgb(255, 0, 0);
+}
+
+.btn {
+    min-width: 275px;
+    padding: 16px;
+    margin-top: 12px;
+    background: rgb(0, 100, 75);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.alert-box {
+    padding: 16px 24px;
+    min-width: 275px;
+    margin-bottom: 12px;
+    background: rgb(255, 100, 100);
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
